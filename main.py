@@ -41,45 +41,14 @@ class VoiceAgent:
 
     def _setup_callbacks(self):
         """Setup callbacks between agents"""
+        # Audio input -> WhisperLive
+        self.audio_input.set_audio_callback(self._handle_audio_input)
 
-        # Audio input -> WhisperLive (thread-safe wrapper)
-        def audio_input_wrapper(audio_data):
-            try:
-                loop = asyncio.get_running_loop()
-                loop.call_soon_threadsafe(
-                    lambda: asyncio.create_task(self._handle_audio_input(audio_data))
-                )
-            except RuntimeError:
-                # No event loop running, skip this audio chunk
-                pass
+        # WhisperLive -> LLM
+        self.whisper_client.set_transcription_callback(self._handle_transcription)
 
-        self.audio_input.set_audio_callback(audio_input_wrapper)
-
-        # WhisperLive -> LLM (sync wrapper for async)
-        def transcription_wrapper(text, is_final):
-            try:
-                loop = asyncio.get_running_loop()
-                loop.call_soon_threadsafe(
-                    lambda: asyncio.create_task(
-                        self._handle_transcription(text, is_final)
-                    )
-                )
-            except RuntimeError:
-                pass
-
-        self.whisper_client.set_transcription_callback(transcription_wrapper)
-
-        # TTS -> Audio output (sync wrapper for async)
-        def tts_wrapper(audio_data):
-            try:
-                loop = asyncio.get_running_loop()
-                loop.call_soon_threadsafe(
-                    lambda: asyncio.create_task(self._handle_tts_audio(audio_data))
-                )
-            except RuntimeError:
-                pass
-
-        self.tts_agent.set_audio_callback(tts_wrapper)
+        # TTS -> Audio output
+        self.tts_agent.set_audio_callback(self._handle_tts_audio)
 
     async def _handle_audio_input(self, audio_data: bytes):
         """Handle audio input from microphone"""
@@ -98,8 +67,7 @@ class VoiceAgent:
             # Generate and speak response
             await self._process_user_input(text)
 
-            # Resume listening after processing
-            await asyncio.sleep(0.1)
+            # Resume listening
             self.is_listening = True
         else:
             # Show partial transcription
