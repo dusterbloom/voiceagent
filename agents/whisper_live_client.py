@@ -3,8 +3,10 @@ import websockets
 import json
 import base64
 import logging
+import uuid
+import numpy as np
 from typing import Callable, Optional
-from config import WHISPER_LIVE_URL, SAMPLE_RATE
+from config import WHISPER_LIVE_HOST, WHISPER_LIVE_PORT, SAMPLE_RATE
 
 logger = logging.getLogger(__name__)
 
@@ -12,17 +14,23 @@ logger = logging.getLogger(__name__)
 class WhisperLiveClient:
     def __init__(
         self,
-        server_url: str = WHISPER_LIVE_URL,
+        host: str = WHISPER_LIVE_HOST,
+        port: int = WHISPER_LIVE_PORT,
         sample_rate: int = SAMPLE_RATE,
         language: str = "en",
+        model: str = "base",
     ):
-        self.server_url = server_url
+        self.host = host
+        self.port = port
+        self.server_url = f"ws://{host}:{port}"
         self.sample_rate = sample_rate
         self.language = language
+        self.model = model
         self.websocket: Optional[websockets.WebSocketServerProtocol] = None
         self.is_connected = False
         self.transcription_callback: Optional[Callable] = None
-        self.session_id = None
+        self.uid = str(uuid.uuid4())
+        self.waiting = False
 
     def set_transcription_callback(self, callback: Callable[[str, bool], None]):
         """Set callback for transcription results
@@ -34,18 +42,20 @@ class WhisperLiveClient:
     async def connect(self):
         """Connect to WhisperLive server"""
         try:
+            # Connect to WhisperLive server
             self.websocket = await websockets.connect(self.server_url)
             self.is_connected = True
             logger.info(f"Connected to WhisperLive server at {self.server_url}")
 
-            # Send initial configuration
+            # Send initial configuration message matching WhisperLive protocol
             config_message = {
-                "type": "config",
-                "data": {
-                    "sample_rate": self.sample_rate,
-                    "language": self.language,
-                    "task": "transcribe",
-                },
+                "uid": self.uid,
+                "language": self.language,
+                "task": "transcribe",
+                "model": self.model,
+                "use_vad": True,
+                "save_output_recording": False,
+                "log_transcription": True,
             }
             await self.websocket.send(json.dumps(config_message))
 
@@ -73,19 +83,30 @@ class WhisperLiveClient:
             logger.warning("Not connected to server")
             return
 
+        if self.waiting:
+            logger.debug("Server is busy, skipping audio chunk")
+            return
+
         try:
-            # Encode audio data as base64
-            audio_b64 = base64.b64encode(audio_data).decode("utf-8")
+            # WhisperLive expects binary WebSocket frames
+            # Convert to numpy array and ensure correct format
+            audio_np = np.frombuffer(audio_data, dtype=np.int16)
 
-            message = {
-                "type": "audio",
-                "data": {"audio": audio_b64, "sample_rate": self.sample_rate},
-            }
+            # Convert to float32 and normalize to [-1, 1] range
+            audio_float = audio_np.astype(np.float32) / 32768.0
 
-            await self.websocket.send(json.dumps(message))
+            # Send as binary data (not text)
+            await self.websocket.send(audio_float.tobytes())
 
+        except websockets.exceptions.ConnectionClosed:
+            logger.info("WebSocket connection closed during audio send")
+            self.is_connected = False
         except Exception as e:
-            logger.error(f"Error sending audio: {e}")
+            if "received 1000" in str(e):
+                logger.debug("WebSocket closed normally")
+                self.is_connected = False
+            else:
+                logger.error(f"Error sending audio: {e}")
 
     async def _listen_for_responses(self):
         """Listen for transcription responses from server"""
@@ -96,6 +117,7 @@ class WhisperLiveClient:
                     await self._handle_response(data)
                 except json.JSONDecodeError as e:
                     logger.error(f"Failed to parse server response: {e}")
+                    logger.debug(f"Raw message: {message}")
                 except Exception as e:
                     logger.error(f"Error handling response: {e}")
 
@@ -108,39 +130,53 @@ class WhisperLiveClient:
 
     async def _handle_response(self, data: dict):
         """Handle different types of responses from server"""
-        response_type = data.get("type")
+        # Handle WhisperLive response format
+        if "status" in data:
+            status = data.get("status")
 
-        if response_type == "transcription":
-            text = data.get("data", {}).get("text", "")
-            is_final = data.get("data", {}).get("is_final", False)
+            if status == "WAIT":
+                self.waiting = True
+                wait_time = data.get("message", 0)
+                logger.info(f"Server busy, waiting {wait_time:.1f} minutes")
 
+            elif status == "CONNECTED":
+                self.waiting = False
+                logger.info("Connected to WhisperLive server")
+
+        # Handle transcription results
+        if "message" in data and isinstance(data["message"], str):
+            text = data["message"].strip()
             if text and self.transcription_callback:
-                self.transcription_callback(text, is_final)
+                # Assume final transcription for now
+                self.transcription_callback(text, True)
 
-        elif response_type == "error":
-            error_msg = data.get("data", {}).get("message", "Unknown error")
-            logger.error(f"Server error: {error_msg}")
+        # Handle segments (more detailed transcription)
+        if "segments" in data:
+            segments = data["segments"]
+            for segment in segments:
+                if "text" in segment:
+                    text = segment["text"].strip()
+                    if text and self.transcription_callback:
+                        # Check if this is a final segment
+                        is_final = segment.get("end", 0) > 0
+                        self.transcription_callback(text, is_final)
 
-        elif response_type == "session":
-            self.session_id = data.get("data", {}).get("session_id")
-            logger.info(f"Session started: {self.session_id}")
-
-        else:
-            logger.debug(f"Unknown response type: {response_type}")
+        # Handle uid confirmation
+        if "uid" in data and data["uid"] == self.uid:
+            logger.debug(f"Received confirmation for UID: {self.uid}")
 
     async def start_streaming(self):
         """Start streaming session"""
         if not self.is_connected:
             await self.connect()
-
-        start_message = {"type": "start", "data": {}}
-        await self.websocket.send(json.dumps(start_message))
+        logger.info("Streaming started")
 
     async def stop_streaming(self):
         """Stop streaming session"""
         if self.is_connected and self.websocket:
-            stop_message = {"type": "stop", "data": {}}
-            await self.websocket.send(json.dumps(stop_message))
+            # Send end of audio signal
+            await self.websocket.send("END_OF_AUDIO")
+            logger.info("Streaming stopped")
 
 
 # Alternative HTTP client for non-streaming use
@@ -151,7 +187,7 @@ class WhisperLiveHTTPClient:
     def __init__(
         self,
         server_host: str = "localhost",
-        server_port: int = 9091,
+        server_port: int = 9090,
         language: str = "en",
     ):
         self.base_url = f"http://{server_host}:{server_port}"

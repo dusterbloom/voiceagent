@@ -66,14 +66,26 @@ def check_ollama_container():
 
 def check_whisperlive():
     """Check WhisperLive service"""
+    import socket
+
     try:
-        response = requests.get("http://localhost:9091/health", timeout=5)
-        if response.status_code == 200:
-            print("✓ WhisperLive is running")
+        # Check if port 9091 is open (WhisperLive WebSocket server)
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(5)
+        result = sock.connect_ex(("localhost", 9091))
+        sock.close()
+
+        if result == 0:
+            print("✓ WhisperLive is running on port 9091")
             return True
         else:
-            print("❌ WhisperLive not responding")
+            print("❌ WhisperLive not accessible on port 9091")
+            print("Start with: ./start_whisperlive.sh")
             return False
+    except Exception as e:
+        print(f"❌ Error checking WhisperLive: {e}")
+        print("Start with: ./start_whisperlive.sh")
+        return False
     except requests.exceptions.RequestException:
         print("❌ WhisperLive not accessible on port 9091")
         print("Start with: ./start_whisperlive.sh")

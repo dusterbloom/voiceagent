@@ -1,0 +1,168 @@
+Starting WhisperLive server...
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection rejected (426 Upgrade Required)
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+    connection.handshake(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    raise self.protocol.handshake_exc
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+INFO:websockets.server:connection rejected (426 Upgrade Required)
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+    connection.handshake(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    raise self.protocol.handshake_exc
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+    connection.handshake(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection rejected (426 Upgrade Required)
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+    connection.handshake(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    raise self.protocol.handshake_exc
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+websockets.exceptions.InvalidUpgrade: missing Connection header
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:01.000 of audio
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.024
+INFO:faster_whisper:VAD filter removed 00:01.024 of audio
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread

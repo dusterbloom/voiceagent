@@ -64,62 +64,74 @@ class TTSAgent:
     async def _piper_tts(self, text: str) -> bytes:
         """Generate speech using Piper TTS"""
         try:
-            # Try ONNX runtime method first (direct model loading)
-            if ONNX_AVAILABLE and os.path.exists(os.path.join(PIPER_MODEL_PATH, PIPER_VOICE)):
-                return await self._piper_onnx_tts(text)
-            
-            # Fallback to command line piper
+            # Skip ONNX for now due to model complexity, use CLI directly
             return await self._piper_cli_tts(text)
-                
+
         except Exception as e:
             logger.error(f"Piper TTS error: {e}")
             return await self._espeak_tts(text)  # Fallback to espeak
-            
+
     async def _piper_onnx_tts(self, text: str) -> bytes:
         """Generate speech using Piper ONNX model directly"""
         try:
             model_path = os.path.join(PIPER_MODEL_PATH, PIPER_VOICE)
             config_path = os.path.join(PIPER_MODEL_PATH, PIPER_CONFIG)
-            
+
             if not os.path.exists(model_path) or not os.path.exists(config_path):
                 logger.warning(f"Piper model files not found at {PIPER_MODEL_PATH}")
                 return await self._piper_cli_tts(text)
-            
+
             # Load model configuration
-            with open(config_path, 'r') as f:
+            with open(config_path, "r") as f:
                 config = json.load(f)
-            
+
             # Create ONNX session
             session = ort.InferenceSession(model_path)
-            
+
             # Text preprocessing (simplified)
             # In a full implementation, you'd need proper phonemization
             text_ids = self._text_to_ids(text, config)
-            
+
             # Run inference
             audio = session.run(None, {"input": text_ids})[0]
-            
+
             # Convert to WAV format
-            return self._audio_to_wav(audio, config.get("audio", {}).get("sample_rate", 22050))
-            
+            return self._audio_to_wav(
+                audio, config.get("audio", {}).get("sample_rate", 22050)
+            )
+
         except Exception as e:
             logger.error(f"Piper ONNX TTS error: {e}")
             return await self._piper_cli_tts(text)
-            
+
     async def _piper_cli_tts(self, text: str) -> bytes:
         """Generate speech using Piper CLI"""
         try:
             # Create temporary file for output
             with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as temp_file:
                 temp_path = temp_file.name
-                
+
             # Try different piper command variations
             piper_commands = [
-                ["piper", "--model", os.path.join(PIPER_MODEL_PATH, PIPER_VOICE), "--output_file", temp_path],
-                ["python", "-m", "piper", "--model", os.path.join(PIPER_MODEL_PATH, PIPER_VOICE), "--output_file", temp_path],
-                ["piper", "--model", self.voice, "--output_file", temp_path]
+                [
+                    "piper",
+                    "--model",
+                    os.path.join(PIPER_MODEL_PATH, PIPER_VOICE),
+                    "--output_file",
+                    temp_path,
+                ],
+                [
+                    "python",
+                    "-m",
+                    "piper",
+                    "--model",
+                    os.path.join(PIPER_MODEL_PATH, PIPER_VOICE),
+                    "--output_file",
+                    temp_path,
+                ],
+                ["piper", "--model", self.voice, "--output_file", temp_path],
             ]
-            
+
             for cmd in piper_commands:
                 try:
                     # Run piper with text input
@@ -127,31 +139,33 @@ class TTSAgent:
                         *cmd,
                         stdin=asyncio.subprocess.PIPE,
                         stdout=asyncio.subprocess.PIPE,
-                        stderr=asyncio.subprocess.PIPE
+                        stderr=asyncio.subprocess.PIPE,
                     )
-                    
+
                     stdout, stderr = await process.communicate(input=text.encode())
-                    
+
                     if process.returncode == 0:
                         # Read generated audio file
                         if os.path.exists(temp_path):
-                            with open(temp_path, 'rb') as f:
+                            with open(temp_path, "rb") as f:
                                 audio_data = f.read()
                             os.unlink(temp_path)  # Clean up temp file
                             return audio_data
                     else:
-                        logger.debug(f"Piper command failed: {' '.join(cmd)}, error: {stderr.decode()}")
-                        
+                        logger.debug(
+                            f"Piper command failed: {' '.join(cmd)}, error: {stderr.decode()}"
+                        )
+
                 except FileNotFoundError:
                     continue
-                    
+
             logger.error("All Piper TTS commands failed")
             return b""
-                
+
         except Exception as e:
             logger.error(f"Piper CLI TTS error: {e}")
             return b""
-            
+
     def _text_to_ids(self, text: str, config: dict) -> np.ndarray:
         """Convert text to phoneme IDs (simplified)"""
         # This is a very basic implementation
@@ -161,42 +175,31 @@ class TTSAgent:
         for char in text.lower():
             if char in char_to_id:
                 ids.append(char_to_id[char])
-            elif char == ' ':
+            elif char == " ":
                 ids.append(0)  # Space token
         return np.array([ids], dtype=np.int64)
-        
+
     def _audio_to_wav(self, audio: np.ndarray, sample_rate: int) -> bytes:
         """Convert audio array to WAV bytes"""
         # Normalize audio
         audio = np.clip(audio, -1.0, 1.0)
         audio_int16 = (audio * 32767).astype(np.int16)
-        
+
         # Create WAV file in memory
         wav_buffer = io.BytesIO()
-        with wave.open(wav_buffer, 'wb') as wav_file:
+        with wave.open(wav_buffer, "wb") as wav_file:
             wav_file.setnchannels(1)  # Mono
             wav_file.setsampwidth(2)  # 16-bit
             wav_file.setframerate(sample_rate)
             wav_file.writeframes(audio_int16.tobytes())
-            
+
         return wav_buffer.getvalue()
-
-            # Read generated audio file
-            if os.path.exists(temp_path):
-                with open(temp_path, "rb") as f:
-                    audio_data = f.read()
-                os.unlink(temp_path)  # Clean up temp file
-                return audio_data
-            else:
-                logger.error("Piper TTS output file not found")
-                return b""
-
-        except FileNotFoundError:
-            logger.error("Piper TTS not found. Please install piper-tts")
-            return await self._espeak_tts(text)  # Fallback to espeak
-        except Exception as e:
-            logger.error(f"Piper TTS error: {e}")
-            return b""
+        # except FileNotFoundError:
+        #     logger.error("Piper TTS not found. Please install piper-tts")
+        #     return await self._espeak_tts(text)  # Fallback to espeak
+        # except Exception as e:
+        #     logger.error(f"Piper TTS error: {e}")
+        #     return b""
 
     async def _espeak_tts(self, text: str) -> bytes:
         """Generate speech using espeak (fallback)"""
@@ -289,25 +292,25 @@ class TTSAgent:
     async def check_tts_availability(self) -> dict:
         """Check which TTS engines are available"""
         available = {}
-        
+
         # Check Piper ONNX models
         piper_onnx_available = (
-            ONNX_AVAILABLE and 
-            os.path.exists(os.path.join(PIPER_MODEL_PATH, PIPER_VOICE)) and
-            os.path.exists(os.path.join(PIPER_MODEL_PATH, PIPER_CONFIG))
+            ONNX_AVAILABLE
+            and os.path.exists(os.path.join(PIPER_MODEL_PATH, PIPER_VOICE))
+            and os.path.exists(os.path.join(PIPER_MODEL_PATH, PIPER_CONFIG))
         )
         available["piper_onnx"] = piper_onnx_available
-        
+
         # Check Piper CLI
         piper_cli_commands = ["piper", "python -m piper"]
         piper_cli_available = False
-        
+
         for cmd in piper_cli_commands:
             try:
                 process = await asyncio.create_subprocess_shell(
                     f"{cmd} --help",
                     stdout=asyncio.subprocess.PIPE,
-                    stderr=asyncio.subprocess.PIPE
+                    stderr=asyncio.subprocess.PIPE,
                 )
                 await process.communicate()
                 if process.returncode == 0:
@@ -315,22 +318,23 @@ class TTSAgent:
                     break
             except:
                 continue
-                
+
         available["piper_cli"] = piper_cli_available
         available["piper"] = piper_onnx_available or piper_cli_available
-            
+
         # Check espeak
         try:
             process = await asyncio.create_subprocess_exec(
-                "espeak", "--help",
+                "espeak",
+                "--help",
                 stdout=asyncio.subprocess.PIPE,
-                stderr=asyncio.subprocess.PIPE
+                stderr=asyncio.subprocess.PIPE,
             )
             await process.communicate()
             available["espeak"] = process.returncode == 0
         except FileNotFoundError:
             available["espeak"] = False
-            
+
         return available
 
 

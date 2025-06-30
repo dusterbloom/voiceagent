@@ -14,7 +14,7 @@ class AudioInputAgent:
         sample_rate: int = SAMPLE_RATE,
         chunk_size: int = CHUNK_SIZE,
         channels: int = CHANNELS,
-        vad_threshold: float = 0.01,
+        vad_threshold: float = 0.001,
     ):
         self.sample_rate = sample_rate
         self.chunk_size = chunk_size
@@ -75,16 +75,9 @@ class AudioInputAgent:
         if status:
             logger.warning(f"Audio callback status: {status}")
 
-        # Voice Activity Detection (simple energy-based)
-        audio_data = np.frombuffer(in_data, dtype=np.int16)
-        energy = np.sqrt(np.mean(audio_data**2))
-
-        # Normalize energy to 0-1 range
-        normalized_energy = energy / 32768.0
-
-        if normalized_energy > self.vad_threshold:
-            if self.audio_callback:
-                self.audio_callback(in_data)
+        # Send all audio chunks (VAD disabled for debugging)
+        if self.audio_callback:
+            self.audio_callback(in_data)
 
         return (None, pyaudio.paContinue)
 

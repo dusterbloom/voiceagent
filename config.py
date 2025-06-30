@@ -2,7 +2,7 @@ import os
 
 # WhisperLive Configuration
 WHISPER_LIVE_HOST = "localhost"
-WHISPER_LIVE_PORT = 9091
+WHISPER_LIVE_PORT = 9091  # Using 9091 as 9090 is reserved
 WHISPER_LIVE_URL = f"ws://{WHISPER_LIVE_HOST}:{WHISPER_LIVE_PORT}"
 
 # Ollama Configuration (Docker)
