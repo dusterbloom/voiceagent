@@ -151,7 +151,7 @@ class WhisperLiveHTTPClient:
     def __init__(
         self,
         server_host: str = "localhost",
-        server_port: int = 9090,
+        server_port: int = 9091,
         language: str = "en",
     ):
         self.base_url = f"http://{server_host}:{server_port}"

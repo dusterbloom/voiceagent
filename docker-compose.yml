@@ -6,7 +6,7 @@ services:
       context: /tmp/WhisperLive
       dockerfile: docker/Dockerfile
     ports:
-      - "9090:9090"
+      - "9091:9091"
     environment:
       - WHISPER_MODEL=base
     volumes:

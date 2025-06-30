@@ -104,7 +104,7 @@ Microphone → Audio Input → WhisperLive Server → LLM (Ollama) → Piper TTS
 ### 1. Setup WhisperLive Server
 ```bash
 # Option A: Docker
-docker run -p 9090:9090 whisper-live
+docker run -p 9091:9091 whisper-live
 
 # Option B: Python installation
 git clone https://github.com/collabora/WhisperLive
@@ -127,7 +127,7 @@ ollama serve  # starts OpenAI-compatible API on localhost:11434
 ```
 
 ### 4. Implementation Checklist
-- [ ] Setup WhisperLive server (port 9090)
+- [ ] Setup WhisperLive server (port 9091)
 - [ ] Audio capture with streaming to WhisperLive
 - [ ] WebSocket/HTTP client for STT
 - [ ] Ollama client with OpenAI format
@@ -167,7 +167,7 @@ services:
   whisper-live:
     image: whisper-live
     ports:
-      - "9090:9090"
+      - "9091:9091"
 ```
 
 ### Option 2: FastAPI Endpoint

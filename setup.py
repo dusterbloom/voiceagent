@@ -61,6 +61,8 @@ def install_python_packages():
         "scipy",
         "pygame",
         "openai",
+        "onnxruntime",
+        "wave",
     ]
 
     for package in packages:
@@ -122,6 +124,59 @@ def check_audio_devices():
         return False
 
 
+def setup_piper_tts():
+    """Setup Piper TTS models"""
+    print("\nSetting up Piper TTS...")
+
+    # Create models directory
+    models_dir = "models/piper"
+    os.makedirs(models_dir, exist_ok=True)
+
+    # Download Piper TTS models
+    piper_models = {
+        "en_US-lessac-medium.onnx": "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx",
+        "en_US-lessac-medium.onnx.json": "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json",
+    }
+
+    for filename, url in piper_models.items():
+        filepath = os.path.join(models_dir, filename)
+        if not os.path.exists(filepath):
+            print(f"Downloading {filename}...")
+            if not run_command(f"wget -O {filepath} {url}", f"Downloading {filename}"):
+                print(f"Warning: Failed to download {filename}")
+                print(f"You can manually download from: {url}")
+        else:
+            print(f"✓ {filename} already exists")
+
+    # Try to install piper-tts package
+    run_command("pip install piper-tts", "Installing piper-tts package")
+
+    return True
+
+
+def check_ollama_docker():
+    """Check if Ollama is running in Docker"""
+    print("\nChecking Ollama Docker container...")
+
+    # Check if Ollama container is running
+    if run_command("docker ps | grep ollama", "Checking for running Ollama container"):
+        print("✓ Found running Ollama container")
+
+        # Test API endpoint
+        if run_command("curl -s http://localhost:11434/api/tags", "Testing Ollama API"):
+            print("✓ Ollama API is accessible")
+            return True
+        else:
+            print("⚠ Ollama container found but API not accessible on port 11434")
+            print("Make sure Ollama container exposes port 11434")
+            return False
+    else:
+        print("⚠ No running Ollama container found")
+        print("Please start your Ollama Docker container with:")
+        print("docker run -d -p 11434:11434 --name ollama ollama/ollama")
+        return False
+
+
 def create_start_scripts():
     """Create convenience start scripts"""
     print("\nCreating start scripts...")
@@ -130,7 +185,7 @@ def create_start_scripts():
     whisperlive_script = """#!/bin/bash
 echo "Starting WhisperLive server..."
 cd WhisperLive
-python run_server.py --host 0.0.0.0 --port 9090
+python run_server.py --port 9091 --backend faster_whisper
 """
 
     with open("start_whisperlive.sh", "w") as f:
@@ -138,10 +193,39 @@ python run_server.py --host 0.0.0.0 --port 9090
 
     os.chmod("start_whisperlive.sh", 0o755)
 
+    # Docker WhisperLive script
+    docker_whisperlive_script = """#!/bin/bash
+echo "Starting WhisperLive server with Docker..."
+docker-compose up whisper-live
+"""
+
+    with open("start_whisperlive_docker.sh", "w") as f:
+        f.write(docker_whisperlive_script)
+
+    os.chmod("start_whisperlive_docker.sh", 0o755)
+
     # Main voice agent script
     main_script = """#!/bin/bash
 echo "Starting Voice Agent System..."
-echo "Make sure WhisperLive and Ollama are running!"
+echo "Checking services..."
+
+# Check Ollama
+if ! curl -s http://localhost:11434/api/tags > /dev/null; then
+    echo "❌ Ollama not accessible. Make sure your Ollama Docker container is running:"
+    echo "   docker run -d -p 11434:11434 --name ollama ollama/ollama"
+    exit 1
+fi
+echo "✓ Ollama is running"
+
+# Check WhisperLive
+if ! curl -s http://localhost:9091/health > /dev/null; then
+    echo "❌ WhisperLive not accessible. Start it with:"
+    echo "   ./start_whisperlive.sh"
+    exit 1
+fi
+echo "✓ WhisperLive is running"
+
+echo "Starting Voice Agent..."
 python3 main.py
 """
 
@@ -150,7 +234,10 @@ python3 main.py
 
     os.chmod("start_voice_agent.sh", 0o755)
 
-    print("✓ Created start_whisperlive.sh and start_voice_agent.sh")
+    print("✓ Created start scripts:")
+    print("  - start_whisperlive.sh")
+    print("  - start_whisperlive_docker.sh")
+    print("  - start_voice_agent.sh")
     return True
 
 
@@ -167,26 +254,32 @@ def main():
     # Install Python packages
     install_python_packages()
 
+    # Check Ollama Docker
+    check_ollama_docker()
+
     # Setup WhisperLive
     setup_whisperlive()
+
+    # Setup Piper TTS
+    setup_piper_tts()
 
     # Check audio devices
     check_audio_devices()
 
     # Create start scripts
     create_start_scripts()
-
     print("\n" + "=" * 40)
     print("Setup completed!")
     print("\nNext steps:")
-    print("1. Install Ollama: https://ollama.ai")
-    print("2. Run: ollama pull llama3.2:3b")
-    print("3. Start Ollama: ollama serve")
-    print("4. Start WhisperLive: ./start_whisperlive.sh")
-    print("5. Start Voice Agent: ./start_voice_agent.sh")
-    print("\nOptional TTS setup:")
-    print("- Install piper-tts for better voice quality")
-    print("- Or use espeak: sudo apt install espeak")
+    print("1. Make sure your Ollama Docker container is running:")
+    print("   docker run -d -p 11434:11434 --name ollama ollama/ollama")
+    print("   docker exec -it ollama ollama pull llama3.2:3b")
+    print("2. Start WhisperLive: ./start_whisperlive.sh")
+    print("3. Start Voice Agent: ./start_voice_agent.sh")
+    print("\nPiper TTS models downloaded to: ./models/piper/")
+    print(
+        "Fallback TTS: sudo apt install espeak (Linux) or brew install espeak (macOS)"
+    )
 
     return True
 

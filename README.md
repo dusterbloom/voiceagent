@@ -23,16 +23,16 @@ Microphone → Audio Input → WhisperLive → LLM (Ollama) → TTS → Audio Ou
 python3 setup.py
 ```
 
-### 2. Install Ollama
+### 2. Setup Ollama (Docker)
 ```bash
-# Install Ollama from https://ollama.ai
-curl -fsSL https://ollama.ai/install.sh | sh
+# Start Ollama container (if not already running)
+docker run -d -p 11434:11434 --name ollama ollama/ollama
 
 # Pull a model
-ollama pull llama3.2:3b
+docker exec -it ollama ollama pull llama3.2:3b
 
-# Start Ollama server
-ollama serve
+# Verify it's running
+curl http://localhost:11434/api/tags
 ```
 
 ### 3. Start WhisperLive Server
@@ -57,17 +57,19 @@ pip install -r requirements.txt
 git clone https://github.com/collabora/WhisperLive.git
 cd WhisperLive
 pip install -r requirements/server.txt
-python run_server.py --host 0.0.0.0 --port 9090
+python run_server.py --host 0.0.0.0 --port 9091
 ```
 
-### TTS Setup (Optional)
-```bash
-# Option 1: Piper TTS (recommended)
-# Follow installation instructions at: https://github.com/rhasspy/piper
+### TTS Setup
+Piper TTS models are automatically downloaded during setup to `./models/piper/`.
 
-# Option 2: espeak (fallback)
+```bash
+# Fallback TTS (if Piper fails)
 sudo apt install espeak  # Linux
 brew install espeak      # macOS
+
+# Manual Piper installation (if needed)
+pip install piper-tts
 ```
 
 ## Configuration
@@ -94,19 +96,25 @@ Edit `config.py` to customize:
 ### WhisperLive Connection Issues
 ```bash
 # Check if server is running
-curl http://localhost:9090/health
+curl http://localhost:9091/health
 
 # Check logs
 tail -f WhisperLive/logs/server.log
 ```
 
-### Ollama Issues
+### Ollama Docker Issues
 ```bash
-# Check if Ollama is running
+# Check if Ollama container is running
+docker ps | grep ollama
+
+# Check if API is accessible
 curl http://localhost:11434/api/tags
 
 # Check available models
-ollama list
+docker exec -it ollama ollama list
+
+# Restart Ollama container
+docker restart ollama
 ```
 
 ### Audio Issues
@@ -153,10 +161,11 @@ voiceagent/
 
 ### Recommended Models
 
-**LLM (Ollama)**:
+**LLM (Ollama Docker)**:
 - `llama3.2:3b` - Fast, good quality
 - `llama3.2:1b` - Fastest, basic quality
 - `qwen2.5:3b` - Alternative option
+- Pull with: `docker exec -it ollama ollama pull <model>`
 
 **STT (WhisperLive)**:
 - `base` - Good balance of speed/accuracy
@@ -164,8 +173,8 @@ voiceagent/
 - `medium` - Better accuracy, slower
 
 **TTS**:
-- Piper: `en_US-lessac-medium` - Natural voice
-- espeak: Built-in voices
+- Piper: `en_US-lessac-medium.onnx` - Natural voice (auto-downloaded)
+- espeak: Built-in voices (fallback)
 
 ## Development
 
