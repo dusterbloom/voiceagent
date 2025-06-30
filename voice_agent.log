@@ -160,3 +160,63 @@
 2025-06-30 20:07:12,580 - agents.audio_output - INFO - Audio output cleanup completed
 2025-06-30 20:07:12,581 - __main__ - INFO - Voice Agent System shutdown complete
 2025-06-30 20:07:12,581 - __main__ - ERROR - Error during shutdown: sent 1000 (OK); then received 1000 (OK)
+2025-06-30 20:07:22,193 - __main__ - INFO - Starting Voice Agent System...
+2025-06-30 20:07:22,382 - __main__ - INFO - TTS engines available: {'piper_onnx': True, 'piper_cli': True, 'piper': True, 'espeak': False}
+2025-06-30 20:07:22,386 - agents.audio_output - INFO - Audio output initialized: 16000Hz
+2025-06-30 20:07:22,386 - __main__ - INFO - Connecting to WhisperLive server...
+2025-06-30 20:07:22,394 - agents.whisper_live_client - INFO - Connected to WhisperLive server at ws://localhost:9091
+2025-06-30 20:07:22,395 - agents.whisper_live_client - INFO - Streaming started
+2025-06-30 20:07:22,395 - __main__ - INFO - Starting audio input...
+2025-06-30 20:07:22,612 - agents.audio_input - INFO - Started recording: 16000Hz, 1 channel(s)
+2025-06-30 20:07:22,612 - __main__ - INFO - Voice Agent System is ready!
+2025-06-30 20:07:22,621 - __main__ - INFO - User said: SERVER_READY
+2025-06-30 20:07:22,621 - __main__ - INFO - Generating response...
+2025-06-30 20:07:22,861 - __main__ - INFO - Assistant: What can I help you with today? Do you need assistance with something specific, such as ordering food, booking a table, or simply having a conversation?
+2025-06-30 20:16:28,636 - __main__ - INFO - Received signal 2, shutting down...
+2025-06-30 20:16:28,675 - __main__ - INFO - Shutting down Voice Agent System...
+2025-06-30 20:16:28,771 - agents.audio_input - INFO - Stopped recording
+2025-06-30 20:16:28,772 - agents.whisper_live_client - INFO - Streaming stopped
+2025-06-30 20:16:28,772 - __main__ - INFO - Shutting down Voice Agent System...
+2025-06-30 20:16:28,788 - agents.whisper_live_client - INFO - Disconnected from WhisperLive server
+2025-06-30 20:16:28,788 - agents.audio_output - INFO - Stopped all audio playback
+2025-06-30 20:16:28,944 - agents.audio_output - INFO - Audio output cleanup completed
+2025-06-30 20:16:28,944 - __main__ - INFO - Voice Agent System shutdown complete
+2025-06-30 20:16:28,945 - __main__ - ERROR - Error during shutdown: sent 1000 (OK); then received 1000 (OK)
+2025-06-30 20:16:55,640 - __main__ - INFO - Starting Voice Agent System...
+2025-06-30 20:16:55,828 - __main__ - INFO - TTS engines available: {'piper_onnx': True, 'piper_cli': True, 'piper': True, 'espeak': False}
+2025-06-30 20:16:55,832 - agents.audio_output - INFO - Audio output initialized: 16000Hz
+2025-06-30 20:16:55,833 - __main__ - INFO - Connecting to WhisperLive server...
+2025-06-30 20:16:55,841 - agents.whisper_live_client - INFO - Connected to WhisperLive server at ws://localhost:9091
+2025-06-30 20:16:55,841 - agents.whisper_live_client - INFO - Streaming started
+2025-06-30 20:16:55,841 - __main__ - INFO - Starting audio input...
+2025-06-30 20:16:56,060 - agents.audio_input - INFO - Started recording: 16000Hz, 1 channel(s)
+2025-06-30 20:16:56,060 - __main__ - INFO - Voice Agent System is ready!
+2025-06-30 20:16:58,637 - __main__ - INFO - Received signal 2, shutting down...
+2025-06-30 20:16:58,639 - __main__ - INFO - Shutting down Voice Agent System...
+2025-06-30 20:16:58,700 - agents.audio_input - INFO - Stopped recording
+2025-06-30 20:16:58,700 - agents.whisper_live_client - INFO - Streaming stopped
+2025-06-30 20:16:58,701 - __main__ - INFO - Shutting down Voice Agent System...
+2025-06-30 20:16:58,717 - agents.whisper_live_client - INFO - Disconnected from WhisperLive server
+2025-06-30 20:16:58,717 - agents.audio_output - INFO - Stopped all audio playback
+2025-06-30 20:16:58,852 - agents.audio_output - INFO - Audio output cleanup completed
+2025-06-30 20:16:58,852 - __main__ - INFO - Voice Agent System shutdown complete
+2025-06-30 20:16:58,853 - __main__ - ERROR - Error during shutdown: sent 1000 (OK); then received 1000 (OK)
+2025-06-30 20:17:07,662 - __main__ - INFO - Starting Voice Agent System...
+2025-06-30 20:17:07,856 - __main__ - INFO - TTS engines available: {'piper_onnx': True, 'piper_cli': True, 'piper': True, 'espeak': False}
+2025-06-30 20:17:07,860 - agents.audio_output - INFO - Audio output initialized: 16000Hz
+2025-06-30 20:17:07,860 - __main__ - INFO - Connecting to WhisperLive server...
+2025-06-30 20:17:07,868 - agents.whisper_live_client - INFO - Connected to WhisperLive server at ws://localhost:9091
+2025-06-30 20:17:07,868 - agents.whisper_live_client - INFO - Streaming started
+2025-06-30 20:17:07,868 - __main__ - INFO - Starting audio input...
+2025-06-30 20:17:08,076 - agents.audio_input - INFO - Started recording: 16000Hz, 1 channel(s)
+2025-06-30 20:17:08,076 - __main__ - INFO - Voice Agent System is ready!
+2025-06-30 20:17:11,221 - __main__ - INFO - Received signal 2, shutting down...
+2025-06-30 20:17:11,290 - __main__ - INFO - Shutting down Voice Agent System...
+2025-06-30 20:17:11,365 - agents.audio_input - INFO - Stopped recording
+2025-06-30 20:17:11,365 - agents.whisper_live_client - INFO - Streaming stopped
+2025-06-30 20:17:11,366 - __main__ - INFO - Shutting down Voice Agent System...
+2025-06-30 20:17:11,382 - agents.whisper_live_client - INFO - Disconnected from WhisperLive server
+2025-06-30 20:17:11,382 - agents.audio_output - INFO - Stopped all audio playback
+2025-06-30 20:17:11,521 - agents.audio_output - INFO - Audio output cleanup completed
+2025-06-30 20:17:11,522 - __main__ - INFO - Voice Agent System shutdown complete
+2025-06-30 20:17:11,522 - __main__ - ERROR - Error during shutdown: sent 1000 (OK); then received 1000 (OK)

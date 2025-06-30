@@ -166,3 +166,2395 @@ INFO:root:Running faster_whisper backend.
 ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
 INFO:root:Cleaning up.
 INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection rejected (426 Upgrade Required)
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+    connection.handshake(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    raise self.protocol.handshake_exc
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+websockets.exceptions.InvalidUpgrade: missing Connection header
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+    connection.handshake(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+    connection.handshake(
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.024
+INFO:faster_whisper:VAD filter removed 00:01.024 of audio
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.536
+INFO:faster_whisper:VAD filter removed 00:01.536 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.600
+INFO:faster_whisper:VAD filter removed 00:01.600 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.536
+INFO:faster_whisper:VAD filter removed 00:01.536 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.536
+INFO:faster_whisper:VAD filter removed 00:01.536 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.600
+INFO:faster_whisper:VAD filter removed 00:01.600 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.536
+INFO:faster_whisper:VAD filter removed 00:01.536 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.536
+INFO:faster_whisper:VAD filter removed 00:01.536 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.600
+INFO:faster_whisper:VAD filter removed 00:00.272 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.032
+INFO:faster_whisper:VAD filter removed 00:03.200 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.672
+INFO:faster_whisper:VAD filter removed 00:03.840 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.312
+INFO:faster_whisper:VAD filter removed 00:04.480 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.016
+INFO:faster_whisper:VAD filter removed 00:05.184 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.720
+INFO:faster_whisper:VAD filter removed 00:05.888 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.360
+INFO:faster_whisper:VAD filter removed 00:06.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.064
+INFO:faster_whisper:VAD filter removed 00:07.232 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.768
+INFO:faster_whisper:VAD filter removed 00:07.936 of audio
+INFO:faster_whisper:Processing audio with duration 00:09.536
+INFO:faster_whisper:VAD filter removed 00:08.704 of audio
+INFO:faster_whisper:Processing audio with duration 00:10.240
+INFO:faster_whisper:VAD filter removed 00:09.408 of audio
+INFO:faster_whisper:Processing audio with duration 00:11.008
+INFO:faster_whisper:VAD filter removed 00:10.176 of audio
+INFO:faster_whisper:Processing audio with duration 00:11.712
+INFO:faster_whisper:VAD filter removed 00:10.880 of audio
+INFO:faster_whisper:Processing audio with duration 00:12.416
+INFO:faster_whisper:VAD filter removed 00:11.584 of audio
+INFO:faster_whisper:Processing audio with duration 00:13.120
+INFO:faster_whisper:VAD filter removed 00:12.288 of audio
+INFO:faster_whisper:Processing audio with duration 00:13.952
+INFO:faster_whisper:VAD filter removed 00:13.120 of audio
+INFO:faster_whisper:Processing audio with duration 00:14.656
+INFO:faster_whisper:VAD filter removed 00:13.824 of audio
+INFO:faster_whisper:Processing audio with duration 00:15.424
+INFO:faster_whisper:VAD filter removed 00:14.592 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.192
+INFO:faster_whisper:VAD filter removed 00:15.360 of audio
+INFO:faster_whisper:Processing audio with duration 00:17.024
+INFO:faster_whisper:VAD filter removed 00:16.192 of audio
+INFO:faster_whisper:Processing audio with duration 00:17.792
+INFO:faster_whisper:VAD filter removed 00:16.960 of audio
+INFO:faster_whisper:Processing audio with duration 00:18.560
+INFO:faster_whisper:VAD filter removed 00:17.728 of audio
+INFO:faster_whisper:Processing audio with duration 00:19.328
+INFO:faster_whisper:VAD filter removed 00:18.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:20.160
+INFO:faster_whisper:VAD filter removed 00:19.328 of audio
+INFO:faster_whisper:Processing audio with duration 00:20.928
+INFO:faster_whisper:VAD filter removed 00:20.096 of audio
+INFO:faster_whisper:Processing audio with duration 00:21.760
+INFO:faster_whisper:VAD filter removed 00:20.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:22.656
+INFO:faster_whisper:VAD filter removed 00:21.824 of audio
+INFO:faster_whisper:Processing audio with duration 00:23.488
+INFO:faster_whisper:VAD filter removed 00:22.656 of audio
+INFO:faster_whisper:Processing audio with duration 00:24.320
+INFO:faster_whisper:VAD filter removed 00:23.488 of audio
+INFO:faster_whisper:Processing audio with duration 00:25.152
+INFO:faster_whisper:VAD filter removed 00:24.320 of audio
+INFO:faster_whisper:Processing audio with duration 00:25.984
+INFO:faster_whisper:VAD filter removed 00:25.152 of audio
+INFO:faster_whisper:Processing audio with duration 00:26.880
+INFO:faster_whisper:VAD filter removed 00:26.048 of audio
+INFO:faster_whisper:Processing audio with duration 00:27.776
+INFO:faster_whisper:VAD filter removed 00:26.944 of audio
+INFO:faster_whisper:Processing audio with duration 00:28.608
+INFO:faster_whisper:VAD filter removed 00:27.776 of audio
+INFO:faster_whisper:Processing audio with duration 00:29.568
+INFO:faster_whisper:VAD filter removed 00:28.736 of audio
+INFO:faster_whisper:Processing audio with duration 00:30.464
+INFO:faster_whisper:VAD filter removed 00:29.632 of audio
+INFO:faster_whisper:Processing audio with duration 00:31.424
+INFO:faster_whisper:VAD filter removed 00:30.592 of audio
+INFO:faster_whisper:Processing audio with duration 00:32.320
+INFO:faster_whisper:VAD filter removed 00:31.488 of audio
+INFO:faster_whisper:Processing audio with duration 00:33.216
+INFO:faster_whisper:VAD filter removed 00:32.384 of audio
+INFO:faster_whisper:Processing audio with duration 00:34.112
+INFO:faster_whisper:VAD filter removed 00:33.280 of audio
+INFO:faster_whisper:Processing audio with duration 00:15.888
+INFO:faster_whisper:VAD filter removed 00:15.888 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.664
+INFO:faster_whisper:VAD filter removed 00:01.664 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.600
+INFO:faster_whisper:VAD filter removed 00:01.600 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.536
+INFO:faster_whisper:VAD filter removed 00:00.432 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.032
+INFO:faster_whisper:VAD filter removed 00:03.168 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.056
+INFO:faster_whisper:VAD filter removed 00:04.192 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.016
+INFO:faster_whisper:VAD filter removed 00:05.152 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.104
+INFO:faster_whisper:VAD filter removed 00:06.240 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.128
+INFO:faster_whisper:VAD filter removed 00:07.264 of audio
+INFO:faster_whisper:Processing audio with duration 00:09.344
+INFO:faster_whisper:VAD filter removed 00:08.480 of audio
+INFO:faster_whisper:Processing audio with duration 00:10.432
+INFO:faster_whisper:VAD filter removed 00:09.568 of audio
+INFO:faster_whisper:Processing audio with duration 00:11.712
+INFO:faster_whisper:VAD filter removed 00:10.848 of audio
+INFO:faster_whisper:Processing audio with duration 00:12.800
+INFO:faster_whisper:VAD filter removed 00:11.936 of audio
+INFO:faster_whisper:Processing audio with duration 00:13.824
+INFO:faster_whisper:VAD filter removed 00:12.960 of audio
+INFO:faster_whisper:Processing audio with duration 00:15.104
+INFO:faster_whisper:VAD filter removed 00:14.240 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.256
+INFO:faster_whisper:VAD filter removed 00:15.392 of audio
+INFO:faster_whisper:Processing audio with duration 00:17.472
+INFO:faster_whisper:VAD filter removed 00:16.608 of audio
+INFO:faster_whisper:Processing audio with duration 00:18.688
+INFO:faster_whisper:VAD filter removed 00:17.824 of audio
+INFO:faster_whisper:Processing audio with duration 00:19.776
+INFO:faster_whisper:VAD filter removed 00:18.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:20.928
+INFO:faster_whisper:VAD filter removed 00:20.064 of audio
+INFO:faster_whisper:Processing audio with duration 00:22.336
+INFO:faster_whisper:VAD filter removed 00:21.472 of audio
+INFO:faster_whisper:Processing audio with duration 00:23.552
+INFO:faster_whisper:VAD filter removed 00:22.688 of audio
+INFO:faster_whisper:Processing audio with duration 00:24.704
+INFO:faster_whisper:VAD filter removed 00:23.840 of audio
+INFO:faster_whisper:Processing audio with duration 00:25.856
+INFO:faster_whisper:VAD filter removed 00:24.992 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.224
+INFO:faster_whisper:VAD filter removed 00:16.224 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.664
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.288
+INFO:faster_whisper:VAD filter removed 00:02.544 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.656
+INFO:faster_whisper:VAD filter removed 00:04.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:09.024
+INFO:faster_whisper:VAD filter removed 00:07.280 of audio
+INFO:faster_whisper:Processing audio with duration 00:11.456
+INFO:faster_whisper:VAD filter removed 00:09.712 of audio
+INFO:faster_whisper:Processing audio with duration 00:13.760
+INFO:faster_whisper:VAD filter removed 00:12.016 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.256
+INFO:faster_whisper:VAD filter removed 00:14.512 of audio
+INFO:faster_whisper:Processing audio with duration 00:18.688
+INFO:faster_whisper:VAD filter removed 00:16.944 of audio
+INFO:faster_whisper:Processing audio with duration 00:21.184
+INFO:faster_whisper:VAD filter removed 00:19.440 of audio
+INFO:faster_whisper:Processing audio with duration 00:23.680
+INFO:faster_whisper:VAD filter removed 00:21.936 of audio
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.102
+INFO:faster_whisper:VAD filter removed 00:01.102 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:00.880 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.481
+INFO:faster_whisper:VAD filter removed 00:00.880 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.032
+INFO:faster_whisper:VAD filter removed 00:00.880 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.583
+INFO:faster_whisper:VAD filter removed 00:00.880 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.859
+INFO:faster_whisper:VAD filter removed 00:00.880 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.064
+INFO:faster_whisper:VAD filter removed 00:03.920 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.615
+INFO:faster_whisper:VAD filter removed 00:03.760 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.891
+INFO:faster_whisper:VAD filter removed 00:03.760 of audio
+INFO:faster_whisper:Processing audio with duration 00:09.096
+INFO:faster_whisper:VAD filter removed 00:05.480 of audio
+INFO:faster_whisper:Processing audio with duration 00:12.954
+INFO:faster_whisper:VAD filter removed 00:09.338 of audio
+INFO:faster_whisper:Processing audio with duration 00:18.742
+INFO:faster_whisper:VAD filter removed 00:15.126 of audio
+INFO:faster_whisper:Processing audio with duration 00:20.948
+INFO:faster_whisper:VAD filter removed 00:17.332 of audio
+INFO:faster_whisper:Processing audio with duration 00:23.428
+INFO:faster_whisper:VAD filter removed 00:19.812 of audio
+INFO:faster_whisper:Processing audio with duration 00:28.114
+INFO:faster_whisper:VAD filter removed 00:24.498 of audio
+INFO:faster_whisper:Processing audio with duration 00:30.246
+INFO:faster_whisper:VAD filter removed 00:26.630 of audio
+INFO:faster_whisper:Processing audio with duration 00:30.246
+INFO:faster_whisper:VAD filter removed 00:26.630 of audio
+INFO:faster_whisper:Processing audio with duration 00:30.246
+INFO:faster_whisper:VAD filter removed 00:26.630 of audio
+INFO:faster_whisper:Processing audio with duration 00:30.246
+INFO:faster_whisper:VAD filter removed 00:26.630 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.929
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.205
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.481
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.032
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.308
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.859
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.134
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.410
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.961
+INFO:faster_whisper:VAD filter removed 00:00.336 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.275
+INFO:faster_whisper:VAD filter removed 00:02.275 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.360
+INFO:faster_whisper:VAD filter removed 00:01.360 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.654
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.205
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.481
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.756
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.032
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.583
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.134
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.686
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.961
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.512
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.788
+INFO:faster_whisper:VAD filter removed 00:00.496 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.166
+INFO:faster_whisper:VAD filter removed 00:03.230 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.311
+INFO:faster_whisper:VAD filter removed 00:03.375 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+ERROR:root:[ERROR]: Sending data to client: received 1000 (OK); then sent 1000 (OK)
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.102
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.481
+INFO:faster_whisper:VAD filter removed 00:02.017 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.410
+INFO:faster_whisper:VAD filter removed 00:03.946 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.512
+INFO:faster_whisper:VAD filter removed 00:05.048 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.512
+INFO:faster_whisper:VAD filter removed 00:05.048 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.512
+INFO:faster_whisper:VAD filter removed 00:05.048 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.512
+INFO:faster_whisper:VAD filter removed 00:05.048 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.512
+INFO:faster_whisper:VAD filter removed 00:05.048 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.654
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.929
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.481
+INFO:faster_whisper:VAD filter removed 00:01.729 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.859
+INFO:faster_whisper:VAD filter removed 00:03.107 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.237
+INFO:faster_whisper:VAD filter removed 00:04.485 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.891
+INFO:faster_whisper:VAD filter removed 00:06.139 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.544
+INFO:faster_whisper:VAD filter removed 00:07.792 of audio
+INFO:faster_whisper:Processing audio with duration 00:09.922
+INFO:faster_whisper:VAD filter removed 00:09.170 of audio
+INFO:faster_whisper:Processing audio with duration 00:11.025
+INFO:faster_whisper:VAD filter removed 00:10.273 of audio
+INFO:faster_whisper:Processing audio with duration 00:14.608
+INFO:faster_whisper:VAD filter removed 00:13.856 of audio
+INFO:faster_whisper:Processing audio with duration 00:15.986
+INFO:faster_whisper:VAD filter removed 00:15.234 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.305
+INFO:faster_whisper:VAD filter removed 00:16.305 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.481
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.756
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.512
+INFO:faster_whisper:VAD filter removed 00:04.680 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.339
+INFO:faster_whisper:VAD filter removed 00:05.507 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.166
+INFO:faster_whisper:VAD filter removed 00:06.334 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.993
+INFO:faster_whisper:VAD filter removed 00:07.161 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.820
+INFO:faster_whisper:VAD filter removed 00:07.988 of audio
+INFO:faster_whisper:Processing audio with duration 00:09.647
+INFO:faster_whisper:VAD filter removed 00:08.815 of audio
+INFO:faster_whisper:Processing audio with duration 00:10.474
+INFO:faster_whisper:VAD filter removed 00:09.642 of audio
+INFO:faster_whisper:Processing audio with duration 00:11.576
+INFO:faster_whisper:VAD filter removed 00:10.744 of audio
+INFO:faster_whisper:Processing audio with duration 00:12.403
+INFO:faster_whisper:VAD filter removed 00:11.571 of audio
+INFO:faster_whisper:Processing audio with duration 00:13.230
+INFO:faster_whisper:VAD filter removed 00:12.398 of audio
+INFO:faster_whisper:Processing audio with duration 00:14.057
+INFO:faster_whisper:VAD filter removed 00:13.225 of audio
+INFO:faster_whisper:Processing audio with duration 00:15.159
+INFO:faster_whisper:VAD filter removed 00:14.327 of audio
+INFO:faster_whisper:Processing audio with duration 00:15.986
+INFO:faster_whisper:VAD filter removed 00:15.154 of audio
+INFO:faster_whisper:Processing audio with duration 00:17.089
+INFO:faster_whisper:VAD filter removed 00:16.257 of audio
+INFO:faster_whisper:Processing audio with duration 00:17.916
+INFO:faster_whisper:VAD filter removed 00:17.084 of audio
+INFO:faster_whisper:Processing audio with duration 00:19.018
+INFO:faster_whisper:VAD filter removed 00:18.186 of audio
+INFO:faster_whisper:Processing audio with duration 00:20.121
+INFO:faster_whisper:VAD filter removed 00:19.289 of audio
+INFO:faster_whisper:Processing audio with duration 00:21.223
+INFO:faster_whisper:VAD filter removed 00:20.391 of audio
+INFO:faster_whisper:Processing audio with duration 00:22.326
+INFO:faster_whisper:VAD filter removed 00:21.494 of audio
+INFO:faster_whisper:Processing audio with duration 00:23.428
+INFO:faster_whisper:VAD filter removed 00:22.596 of audio
+INFO:faster_whisper:Processing audio with duration 00:24.531
+INFO:faster_whisper:VAD filter removed 00:23.699 of audio
+INFO:faster_whisper:Processing audio with duration 00:25.633
+INFO:faster_whisper:VAD filter removed 00:24.801 of audio
+INFO:faster_whisper:Processing audio with duration 00:26.460
+INFO:faster_whisper:VAD filter removed 00:25.628 of audio
+INFO:faster_whisper:Processing audio with duration 00:27.562
+INFO:faster_whisper:VAD filter removed 00:26.730 of audio
+INFO:faster_whisper:Processing audio with duration 00:28.665
+INFO:faster_whisper:VAD filter removed 00:27.833 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.073
+INFO:faster_whisper:VAD filter removed 00:16.073 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:01.378 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.378
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.410
+INFO:faster_whisper:VAD filter removed 00:03.594 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.166
+INFO:faster_whisper:VAD filter removed 00:06.350 of audio
+INFO:faster_whisper:Processing audio with duration 00:09.647
+INFO:faster_whisper:VAD filter removed 00:08.831 of audio
+INFO:faster_whisper:Processing audio with duration 00:12.128
+INFO:faster_whisper:VAD filter removed 00:11.311 of audio
+INFO:faster_whisper:Processing audio with duration 00:15.159
+INFO:faster_whisper:VAD filter removed 00:14.343 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.847
+INFO:faster_whisper:VAD filter removed 00:16.031 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.847
+INFO:faster_whisper:VAD filter removed 00:16.031 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.847
+INFO:faster_whisper:VAD filter removed 00:16.031 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.847
+INFO:faster_whisper:VAD filter removed 00:16.031 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.847
+INFO:faster_whisper:VAD filter removed 00:16.031 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.847
+INFO:faster_whisper:VAD filter removed 00:16.031 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.847
+INFO:faster_whisper:VAD filter removed 00:16.031 of audio
+INFO:faster_whisper:Processing audio with duration 00:16.847
+INFO:faster_whisper:VAD filter removed 00:16.031 of audio
+ERROR:root:Unexpected error: a bytes-like object is required, not 'str'
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:01.100 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.700
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.800
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.800
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.700
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.800
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.040
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.140
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.440
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.540
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.740
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.840
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.940
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.340
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.440
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.840
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.140
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+ERROR:root:[ERROR]: Sending data to client: no close frame received or sent
+INFO:root:Exiting speech to text thread
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:01.100 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:01.100 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:01.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:01.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.200
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.500
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.900
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.000
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.300
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.400
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.500
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.800
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.300
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.800
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.400
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.500
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.800
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.400
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.000
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.800
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.900
+INFO:faster_whisper:VAD filter removed 00:00.528 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.210
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.310
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.610
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.710
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.810
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.910
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.110
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.410
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.710
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.910
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.010
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.310
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.510
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.610
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.910
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.310
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.610
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.010
+INFO:faster_whisper:VAD filter removed 00:01.296 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.610
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.010
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.210
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.010
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.610
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.410
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.010
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.210
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.610
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:07.810
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.010
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.210
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.410
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:08.810
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:09.810
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:10.910
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:12.110
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:13.510
+INFO:faster_whisper:VAD filter removed 00:00.912 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.900
+INFO:faster_whisper:VAD filter removed 00:00.304 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.400
+INFO:faster_whisper:VAD filter removed 00:00.304 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.900
+INFO:faster_whisper:VAD filter removed 00:00.304 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.500
+INFO:faster_whisper:VAD filter removed 00:00.304 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.100
+INFO:faster_whisper:VAD filter removed 00:00.304 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.600
+INFO:faster_whisper:VAD filter removed 00:00.304 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.300
+INFO:faster_whisper:VAD filter removed 00:00.304 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.900
+INFO:faster_whisper:VAD filter removed 00:01.104 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.000
+INFO:faster_whisper:VAD filter removed 00:01.104 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.300
+INFO:faster_whisper:VAD filter removed 00:01.104 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.100
+INFO:faster_whisper:VAD filter removed 00:01.104 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.700
+INFO:faster_whisper:VAD filter removed 00:01.104 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.900
+INFO:faster_whisper:VAD filter removed 00:01.104 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.000
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+INFO:faster_whisper:VAD filter removed 00:01.104 of audio
+ERROR:root:[ERROR]: Sending data to client: no close frame received or sent
+INFO:root:Exiting speech to text thread
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 138, in parse
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 309, in parse_line
+    # We don't attempt to support obsolete line folding.
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/server.py", line 545, in parse
+    self.state = OPEN
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/http11.py", line 140, in parse
+    """
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 590, in conn_handler
+  File "/home/peppi/.local/lib/python3.10/site-packages/websockets/sync/server.py", line 189, in handshake
+    returned by :meth:`~socket.socket.accept`.
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:01.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.800
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.300
+INFO:faster_whisper:VAD filter removed 00:01.820 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.700
+INFO:faster_whisper:VAD filter removed 00:02.220 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.000
+INFO:faster_whisper:VAD filter removed 00:02.520 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.400
+INFO:faster_whisper:VAD filter removed 00:02.432 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.700
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.800
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.100
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.200
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.300
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.600
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.700
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.000
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.300
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.500
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.800
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.200
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.214
+INFO:faster_whisper:VAD filter removed 00:02.928 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.284
+INFO:faster_whisper:VAD filter removed 00:01.284 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:01.100 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.700
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.700
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.000
+INFO:faster_whisper:VAD filter removed 00:01.616 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.400
+INFO:faster_whisper:VAD filter removed 00:02.016 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.700
+INFO:faster_whisper:VAD filter removed 00:02.316 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.000
+INFO:faster_whisper:VAD filter removed 00:02.616 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.400
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.500
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.600
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.900
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.000
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.300
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.400
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.500
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.800
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.100
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.500
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:05.800
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.100
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.114
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.114
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.114
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.114
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:06.114
+INFO:faster_whisper:VAD filter removed 00:02.800 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.314
+INFO:faster_whisper:VAD filter removed 00:01.314 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
+INFO:websockets.server:connection open
+INFO:root:New client connected
+INFO:root:Using custom model /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Using Device=cuda with precision float16
+INFO:root:Model not in model_sizes
+INFO:root:Loading model: /home/peppi/.cache/huggingface/hub/models--Systran--faster-whisper-base/snapshots/ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66
+INFO:root:Running faster_whisper backend.
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:01.100 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:01.100 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.100
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.400
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.800
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:01.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.300
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.200
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.600
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:03.900
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.300
+INFO:faster_whisper:VAD filter removed 00:01.788 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.600
+INFO:faster_whisper:VAD filter removed 00:02.088 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.654
+INFO:faster_whisper:VAD filter removed 00:02.142 of audio
+INFO:faster_whisper:Processing audio with duration 00:04.654
+INFO:faster_whisper:VAD filter removed 00:02.142 of audio
+INFO:faster_whisper:Processing audio with duration 00:02.654
+INFO:faster_whisper:VAD filter removed 00:02.654 of audio
+INFO:root:Connection closed by client
+INFO:root:Cleaning up.
+INFO:root:Exiting speech to text thread
