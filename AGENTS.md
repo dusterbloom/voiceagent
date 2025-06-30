@@ -1,145 +1,181 @@
-# Voice Agent System Architecture
+# Local Voice Agent System
 
-## Core Agents
+## Core Agents (Local Only)
 
-### 1. Speech Recognition Agent
-**Purpose**: Convert speech to text
+### 1. Audio Input Agent
+**Purpose**: Capture and process microphone input
 **Responsibilities**:
-- Real-time audio processing
-- Speech-to-text conversion
-- Noise filtering and enhancement
-- Language detection
+- Real-time audio capture
+- Audio preprocessing and filtering
+- Voice activity detection
+- Audio chunking for processing
 
-**Implementation Priority**: HIGH
-**Dependencies**: Audio input system
+**Implementation**: Python with `pyaudio` or `sounddevice`
+**Priority**: HIGH
 
-### 2. Natural Language Processing Agent
-**Purpose**: Understand and process user intent
+### 2. Speech-to-Text Agent
+**Purpose**: Convert speech to text locally with streaming
 **Responsibilities**:
-- Intent recognition
-- Entity extraction
+- Real-time streaming speech recognition
+- Continuous transcription
+- Audio format handling
+- WebSocket/HTTP API interface
+
+**Implementation**: WhisperLive (FastAPI endpoint, Docker, or Python server)
+**Priority**: HIGH
+
+### 3. LLM Agent
+**Purpose**: Process text and generate responses
+**Responsibilities**:
+- Text understanding and processing
+- Response generation
 - Context management
-- Conversation flow control
+- OpenAI API compatible interface
 
-**Implementation Priority**: HIGH
-**Dependencies**: Speech Recognition Agent
-
-### 3. Response Generation Agent
-**Purpose**: Generate appropriate responses
-**Responsibilities**:
-- Response planning
-- Content generation
-- Personality consistency
-- Context-aware replies
-
-**Implementation Priority**: HIGH
-**Dependencies**: NLP Agent
+**Implementation**: Local LLM via Ollama with OpenAI-compatible API
+**Priority**: HIGH
 
 ### 4. Text-to-Speech Agent
-**Purpose**: Convert text responses to speech
+**Purpose**: Convert responses to speech locally
 **Responsibilities**:
-- Voice synthesis
-- Emotion and tone control
-- Audio quality optimization
+- Local voice synthesis
+- Audio output streaming
+- Voice quality control
+
+**Implementation**: Local TTS via `piper-tts` or `coqui-tts`
+**Priority**: HIGH
+
+### 5. Audio Output Agent
+**Purpose**: Play generated speech
+**Responsibilities**:
+- Audio playback
+- Volume control
 - Real-time streaming
 
-**Implementation Priority**: HIGH
-**Dependencies**: Response Generation Agent
+**Implementation**: Python with `pygame` or `sounddevice`
+**Priority**: HIGH
 
-### 5. Memory Management Agent
-**Purpose**: Handle conversation history and context
-**Responsibilities**:
-- Short-term memory (current conversation)
-- Long-term memory (user preferences)
-- Context switching
-- Memory optimization
+## Quick Local Setup (Same Day)
 
-**Implementation Priority**: MEDIUM
-**Dependencies**: NLP Agent
+### Minimal Stack
+1. **WhisperLive**: Real-time streaming STT server (FastAPI/Docker)
+2. **Ollama**: Local LLM server with OpenAI-compatible API
+3. **Piper TTS**: Fast local text-to-speech
+4. **PyAudio**: Audio I/O handling
 
-### 6. Task Execution Agent
-**Purpose**: Execute user-requested actions
-**Responsibilities**:
-- API integrations
-- System commands
-- External service calls
-- Result validation
+### Implementation Order
+1. Setup WhisperLive server (Docker or Python)
+2. Audio capture → WhisperLive streaming API
+3. Text → Ollama (OpenAI API format)
+4. Response → Piper TTS → Audio output
+5. Connect pipeline with WebSocket/HTTP clients
 
-**Implementation Priority**: MEDIUM
-**Dependencies**: NLP Agent
-
-## Quick Implementation Strategy
-
-### Phase 1 (MVP - 1-2 days)
-1. Basic Speech Recognition Agent
-2. Simple NLP Agent (intent matching)
-3. Template-based Response Generation
-4. Basic TTS Agent
-
-### Phase 2 (Enhanced - 3-5 days)
-1. Advanced NLP with context
-2. Memory Management Agent
-3. Improved response generation
-4. Basic task execution
-
-### Phase 3 (Full Featured - 1-2 weeks)
-1. All agents fully implemented
-2. Advanced integrations
-3. Performance optimization
-4. Error handling and recovery
-
-## Technology Stack Recommendations
+## Local Technology Stack
 
 ### Speech Recognition
-- OpenAI Whisper (local/API)
-- Google Speech-to-Text
-- Azure Speech Services
+- **WhisperLive** (streaming Whisper server)
+  - FastAPI endpoint option
+  - Docker container option
+  - Python server option
 
-### NLP
-- OpenAI GPT models
-- Anthropic Claude
-- Local models (Ollama)
+### LLM Processing
+- **Ollama** (OpenAI API compatible)
+- **llama.cpp** with OpenAI wrapper
+- **vLLM** (if GPU available)
 
-### TTS
-- ElevenLabs
-- OpenAI TTS
-- Azure Speech Services
+### Text-to-Speech
+- **Piper TTS** (fast, lightweight)
+- **Coqui TTS** (more voices)
+- **espeak-ng** (basic fallback)
 
-### Framework
-- Python with asyncio
-- Node.js with WebRTC
-- Real-time WebSocket connections
+### Audio I/O
+- **PyAudio** or **sounddevice**
+- **pygame** for playback
 
-## Agent Communication Protocol
+## Local Pipeline Flow
 
 ```
-User Speech → Speech Recognition → NLP → Response Generation → TTS → Audio Output
-                     ↓                ↓           ↓
-                Memory Agent ← Task Execution ← External APIs
+Microphone → Audio Input → WhisperLive Server → LLM (Ollama) → Piper TTS → Audio Output → Speakers
+                              ↑ (WebSocket/HTTP)
 ```
 
-## Quick Start Checklist
+## Quick Start Setup
 
-- [ ] Set up audio input/output
-- [ ] Implement basic speech recognition
-- [ ] Create simple intent matching
-- [ ] Add basic response templates
-- [ ] Integrate TTS service
-- [ ] Test end-to-end flow
-- [ ] Add error handling
-- [ ] Optimize for real-time performance
+### 1. Setup WhisperLive Server
+```bash
+# Option A: Docker
+docker run -p 9090:9090 whisper-live
 
-## Performance Targets
+# Option B: Python installation
+git clone https://github.com/collabora/WhisperLive
+cd WhisperLive
+pip install -r requirements.txt
+python run_server.py
+```
 
-- **Latency**: < 500ms end-to-end
-- **Accuracy**: > 95% speech recognition
-- **Uptime**: > 99% availability
-- **Memory**: < 1GB RAM usage
+### 2. Install Dependencies
+```bash
+pip install pyaudio sounddevice asyncio websockets aiohttp
+# Install Ollama from https://ollama.ai
+# Install Piper TTS
+```
 
-## Monitoring and Metrics
+### 3. Setup Ollama
+```bash
+ollama pull llama3.2:3b  # or preferred model
+ollama serve  # starts OpenAI-compatible API on localhost:11434
+```
 
-- Response time per agent
-- Accuracy metrics
-- Error rates
-- User satisfaction scores
-- System resource usage
+### 4. Implementation Checklist
+- [ ] Setup WhisperLive server (port 9090)
+- [ ] Audio capture with streaming to WhisperLive
+- [ ] WebSocket/HTTP client for STT
+- [ ] Ollama client with OpenAI format
+- [ ] Piper TTS integration
+- [ ] Audio playback system
+- [ ] Async pipeline coordination
+- [ ] Error handling and recovery
+
+## Performance Targets (Local)
+
+- **Latency**: < 2s end-to-end (local processing)
+- **CPU Usage**: < 50% on modern CPU
+- **Memory**: < 4GB RAM (including models)
+- **Real-time**: Streaming audio processing
+
+## File Structure
+```
+voiceagent/
+├── agents/
+│   ├── audio_input.py
+│   ├── whisper_live_client.py
+│   ├── llm_agent.py
+│   ├── tts_agent.py
+│   └── audio_output.py
+├── main.py
+├── config.py
+├── requirements.txt
+└── docker-compose.yml  # for WhisperLive server
+```
+
+## WhisperLive Integration Options
+
+### Option 1: Docker Compose
+```yaml
+# docker-compose.yml
+services:
+  whisper-live:
+    image: whisper-live
+    ports:
+      - "9090:9090"
+```
+
+### Option 2: FastAPI Endpoint
+- WhisperLive provides REST API endpoints
+- HTTP POST for audio chunks
+- WebSocket for streaming
+
+### Option 3: Python Server
+- Direct integration with WhisperLive Python server
+- Custom configuration options
+- Better control over model parameters
