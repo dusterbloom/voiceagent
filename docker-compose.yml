@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  whisper-live:
+    build:
+      context: /tmp/WhisperLive
+      dockerfile: docker/Dockerfile
+    ports:
+      - "9090:9090"
+    environment:
+      - WHISPER_MODEL=base
+    volumes:
+      - ./models:/app/models
+    restart: unless-stopped

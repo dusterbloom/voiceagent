@@ -1,0 +1,11 @@
+pyaudio
+sounddevice
+asyncio
+websockets
+aiohttp
+requests
+numpy
+scipy
+piper-tts
+pygame
+openai
